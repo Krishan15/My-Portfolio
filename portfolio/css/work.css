@@ -1,0 +1,274 @@
+*{margin: 0px; padding: 0px; box-sizing: border-box;}
+
+.container{
+    margin: 0; height: 100vh; display: flex;
+    overflow: hidden; position: relative; justify-content: center;
+}
+.nav{
+    position: absolute; margin-top: 15px;
+    height: 7%; width: 100%; 
+    background-image: linear-gradient(to right, #fbc500, #f9ce47, #fee8a1, #f8f4e5, #f7f5f0, #ffffff);   
+}
+
+.logo{
+    height: 100px; width: 100px; float: left;
+    margin-left: 20px; margin-top: -20px; 
+    
+}
+.anc{
+    height: 100%; width: 120px; float: left; margin-left: 20px;
+    text-align: center; justify-content: center; 
+    align-items: center; display: flex; 
+    color: black;
+    font-weight: bold; text-decoration: none;
+    transition: all 0.5s;
+}
+.anc:hover{background: black; color: white; transform: scale(1.2);}
+/* ------------------------ */
+.main{
+    margin-top: 130px; display: flex; align-items: center;
+    justify-content: center;
+    position: relative; height: 40vh; width: 100%; 
+}
+.left, .right{
+    height: 100%; 
+}
+.left{
+    margin-top: -20px;
+    width: 40%; display: flex; margin-left: 10%;
+    justify-content: center; align-items: center;
+    animation: result 1s; animation-fill-mode: forwards;
+}
+ @keyframes result{
+    0%{ transform: translatex(-100px);}
+    100%{  transform: translatex(0px);}
+}
+.right{
+    width: 60%;  margin-left: 5%;
+    animation: resultt 1s; animation-fill-mode: forwards;
+}
+ @keyframes resultt{
+    0%{ transform: translatex(100px);}
+    100%{  transform: translatex(-0px);}
+}
+
+.imgee{
+    box-shadow: 5px 5px 15px black;
+}
+span{
+    color: rgb(255, 196, 0);
+    font-size: 60px; font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+hr{
+    width: 75%;    
+}
+p{
+    margin-top: 10px; width: 75%; text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn{
+    
+    background-color: rgb(255, 196, 0); border-radius: 25px;
+    color: black; height: 40px; width: 150px; text-decoration: none;
+    align-items: center; display: flex; justify-content: center;
+    font-family: Arial, Helvetica, sans-serif; font-weight: bold;
+    border: 2px solid rgb(255, 196, 0); margin-top: 3%;
+    transition: all 0.5s; 
+    }
+
+.btn:hover{background: black; color: white; 
+        border: 2px solid black;
+        transform: scale(1.010);
+    }
+
+.snd{
+    position: absolute; margin-top: 42%;
+    display: flex;
+    height: 40vh; width: 100%; float: left;
+    position: absolute; 
+}
+.lef{
+    height: 100%; width: 60%; 
+    position: relative;
+    padding-left: 11%; padding-top: 2%; 
+    animation: result 1s; animation-fill-mode: forwards;
+}
+ @keyframes result{
+    0%{ transform: translatex(-100px);}
+    100%{  transform: translatex(0px);}
+
+}
+.rih{
+    height: 100%; width: 40%;
+    position: relative; 
+    animation: resultt 1s; animation-fill-mode: forwards;
+}
+ @keyframes resultt{
+    0%{ transform: translatex(100px);}
+    100%{  transform: translatex(-0px);}
+}
+.temp{
+    margin-left: -20%; margin-top: 5%; display: flex;
+    height: 90%; width: 100%; 
+
+}
+
+    .swiper {
+      width: 80%;
+      
+    }
+
+    .swiper-slide {
+        margin-top: 10px;
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 200px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+@media only screen and (max-width: 600px) {
+    .container{
+        margin: 0; height: 175vh;  
+        overflow: hidden; position: relative;
+        
+    }
+
+    .nav{
+        position: absolute; margin-top: 15px;
+        height: 45px; width: 100%;  float: left;
+       
+        background-image: linear-gradient(to right, #fbc500, #f9ce47, #fee8a1, #f8f4e5, #f7f5f0, #ffffff);
+        
+    }
+    .logo{
+        height: 80px; width: 80px;
+        margin-left: 15px; margin-top: -18px; 
+        
+    }
+    .anc{
+        height: 100%; width: 50px; float: left; margin-left: 10px;
+        text-align: center; justify-content: center; 
+        align-items: center; display: flex;  font-size: 10px;
+        color: black; transition: all 0.5s;
+        font-weight: bold; text-decoration: none;
+        
+    }
+
+
+
+
+
+
+    .main{
+        margin-top: 100px; position: relative;
+         height: 100vh; width: 100%;
+    }
+  
+    .left{
+         height: 30vh; width: 90%;
+         position: absolute; margin-top: -350px; margin-left: 0px;
+        
+    }
+    .right{
+        width: 90%; height: 50vh; 
+        position: absolute; margin-top: 220px; margin-left: 0px;
+    }
+  
+    .right span{
+        color: rgb(255, 196, 0); margin-top: -290px;
+        font-size: 48px; font-weight: bold; position: absolute;
+        font-family: Arial, Helvetica, sans-serif; margin-left: 0px;
+    }
+    .right hr{
+        width: 100%;   
+        position: absolute;
+        margin-left: 0px;
+        margin-top: -230px; 
+    }
+    p{
+        margin-top: 10px; width: 100%; text-align: justify;
+        font-family: Arial, Helvetica, sans-serif; position: relative;
+    }
+    
+    .btn{
+        
+        background-color: rgb(255, 196, 0); border-radius: 25px;
+        color: black; height: 40px; width: 150px; text-decoration: none;
+        align-items: center; display: flex; justify-content: center;
+        font-family: Arial, Helvetica, sans-serif; font-weight: bold;
+        border: 2px solid rgb(255, 196, 0); margin-top: 3%;
+        transition: all 0.5s; 
+        }
+
+
+
+
+
+
+
+
+
+
+
+.snd{
+    position: relative; margin-top: 1150px;
+    height: 100vh; width: 100%; 
+    
+}
+span{
+    color: rgb(255, 196, 0); margin-top: -320px;
+    margin-left: 0px;
+    font-size: 50px; font-weight: bold; position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+hr{
+    width: 90%; margin-left: 0px;
+    position: absolute;
+    margin-top: -260px; 
+}
+.lef{
+    height: 100%; width: 100%; margin-left: -30px;
+    position: absolute; margin-top: 300px;
+}
+.rih{
+    height: 40vh; width: 100%; margin-top: 50px;
+    position: absolute; 
+    margin-left: 100px;
+    
+}
+
+
+
+
+
+
+}

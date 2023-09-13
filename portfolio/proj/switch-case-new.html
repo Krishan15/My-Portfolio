@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .parent {
+            background-color: rgba(0, 0, 0, 0.644);
+            padding: 30px 20px 30px 20px;
+            /* border: 1px solid black; */
+            height: 112vh;
+
+
+
+        }
+
+        #mode_choose {
+            font-size: 34px;
+            color: rgb(255, 255, 255);
+            margin: 0 0 20px 0;
+            text-shadow: 0.4px 1px 2px rgb(255, 251, 4);
+            word-spacing: 4px;
+            letter-spacing: 1.3px;
+
+        }
+
+        #head {
+            color: rgb(255, 248, 248);
+            margin-top: 3%;
+            font-size: 60px;
+            text-align: center;
+            text-shadow: 0.4px 1px 2px rgb(255, 251, 2);
+            word-spacing: 4px;
+            letter-spacing: 1.3px;
+        }
+
+        .left_alig {
+            margin: 3% 0 40px 0;
+            text-align: center;
+        }
+
+        #select_mode {
+            text-align: center;
+            background-color: rgb(5, 18, 113);
+            color: rgb(255, 255, 255);
+            font-weight: 700;
+            font-size: large;
+            padding: 4px 10px 4px 10px;
+        }
+
+
+        #mode_submit {
+            margin-top: 1%;
+            text-align: center;
+            background-color: rgb(234, 255, 4);
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+            font-size: large;
+            padding: 7px 20px 7px 20px;
+            border-radius: 5%;
+            border: 1px solid black;
+
+        }
+
+        #mode_submit:hover {
+            background-color: rgb(37, 59, 224);
+            transition-duration: 0.7s;
+            color: rgb(255, 255, 255);
+            border-radius: 5%;
+        }
+
+        #mar {
+            color: white;
+            margin-top: 30px;
+        }
+
+        #vid {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        #vid1 {
+            display: none;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        #vid2 {
+            display: none;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        #vid3 {
+            display: none;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        #vid4 {
+            display: none;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        #vid5 {
+            display: none;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        #vid6 {
+            display: none;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="parent">
+        <video autoplay muted loop id="vid">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-waves-coming-to-the-beach-5016-large.mp4"
+                type="video/mp4">
+        </video>
+
+        <video autoplay muted loop id="vid6">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-waves-coming-to-the-beach-5016-large.mp4"
+                type="video/mp4">
+        </video>
+
+
+        <video autoplay muted loop id="vid1">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-man-driving-through-nature-enjoying-the-wind-41563-large.mp4"
+                type="video/mp4">
+        </video>
+
+        <video autoplay muted loop id="vid2">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-couple-touring-a-beach-riding-a-motorcycle-36870-large.mp4">
+        </video>
+
+        <video autoplay muted loop id="vid3">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-woman-in-the-bus-seeing-through-the-windows-14036-large.mp4"
+                type="video/mp4">
+        </video>
+
+        <video autoplay muted loop id="vid4">
+            <source
+                src="https://assets.mixkit.co/videos/preview/mixkit-woman-and-man-having-a-walk-on-a-beach-44489-large.mp4"
+                type="video/mp4">
+        </video>
+
+        <video autoplay muted loop id="vid5">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-train-view-in-slow-motion-7326-large.mp4"
+                type="video/mp4">
+        </video>
+
+        <h1 id="head">Delhi To Goa Trip</h1>
+        <div class="left_alig">
+            <h1 id="mode_choose">Choose Transport Mode</h1>
+
+
+
+            <select name="" id="select_mode">
+                <option value="Please choose mode">Please choose mode</option>
+                <option value="Car"> Car </option>
+                <option value="Bike"> Bike </option>
+                <option value="Bus"> Bus </option>
+                <option value="Walk"> Walk </option>
+                <option value="Train"> Train </option>
+            </select><br>
+            <button id="mode_submit" onclick="mode()">Submit</button><br>
+            <h2 id="mar"><span id="result"></span></h2>
+        </div>
+    </div>
+
+
+    <script>
+
+        function gameChanger()
+        {
+            document.getElementById("vid").style.display = "none"
+            document.getElementById("vid1").style.display = "none"
+            document.getElementById("vid2").style.display = "none"
+            document.getElementById("vid3").style.display = "none"
+            document.getElementById("vid4").style.display = "none"
+            document.getElementById("vid5").style.display = "none";
+        }
+
+
+
+        function mode() {
+
+            gameChanger()
+           
+            let mode_select = document.getElementById("select_mode").value;
+
+            switch (mode_select) {
+                case "Car":
+                    document.getElementById("result").innerText = "You should take the car for convenience.";
+                    document.getElementById("vid1").style.display = "block";
+                    break;
+                case "Bike":
+                    document.getElementById("result").innerText = "Biking is a great way to stay healthy and help the environment.";
+                    document.getElementById("vid2").style.display = "block";
+                    break;
+                case "Bus":
+                    document.getElementById("result").innerText = "Taking the bus is an affordable option for public transportation.";
+                    document.getElementById("vid3").style.display = "block";
+                    break;
+                case "Walk":
+                    document.getElementById("result").innerText = "Walking is a good choice for short distances and getting some exercise.";
+                    document.getElementById("vid4").style.display = "block";
+                    break;
+                case "Train":
+                    document.getElementById("result").innerText = "We couldn't determine the best mode of transport for you.";
+                    document.getElementById("vid5").style.display = "block";
+                    break;
+                case "Please choose mode":
+                    document.getElementById("result").innerText = "Please Select one mode";
+                    document.getElementById("vid6").style.display = "block";
+                    break;
+
+            }
+        }
+
+
+    </script>
+
+</body>
+
+
+</html>

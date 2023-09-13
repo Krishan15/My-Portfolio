@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{margin: 0px; padding: 0px;}
+
+        .main{height: 850px; width: 100%;
+        background-image: url(https://cdn.pixabay.com/photo/2016/02/21/06/22/macbook-air-1213180_1280.jpg);
+        background-repeat: no-repeat; background-size: cover; position: relative;}
+
+        .box1{position: absolute; top: 50px; left: 200px;} 
+        .box2{position: absolute; top: 50px; left: 1030px;}
+        .box3{position: absolute; top: 450px; left: 200px;}
+        .box4{position: absolute; top: 450px; left: 1030px;}
+        .box5{position: absolute; top: 250px; left: 600px;}
+
+        .circle{position: relative; height: 200px; width: 200px; border-radius: 50%; transform-style: preserve-3d;
+        transition: all 1s;}
+
+        #a{background-image: url(https://images.pexels.com/photos/4826191/pexels-photo-4826191.jpeg?auto=compress&cs=tinysrgb&w=600); background-size: cover;}
+        #b{background-image: url(https://images.pexels.com/photos/458766/pexels-photo-458766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-size: cover;}
+        #c{background-image: url(https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-size: cover;}
+        #d{background-image: url(https://images.pexels.com/photos/7176390/pexels-photo-7176390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-size: cover;}
+        #e{background-image: url(https://images.pexels.com/photos/14041407/pexels-photo-14041407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-size: cover;}
+
+        .fcrcl, .back{position: absolute; height: 200px; width: 200px; border-radius: 50%; backface-visibility: hidden;}
+        .back{transform: rotateY(180deg); background: black; color: white;}
+        .circle:hover{transform: rotateY(180deg);}
+        
+        h3{padding: 10px; color: white; font-family: fantasy; text-align: center;}
+        p{color: white;} 
+        span{float: left; padding-top: 95px; padding-left: 15px;}       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box1">
+            <div class="circle">
+                <div class="fcrcl" id="a"></div>
+                <div class="back" id="bmcd"><span>Ph. No-(011-1234 1234)</span></div>
+            </div>  
+            <h3>BRIDAL MAKE UP</h3>
+            <p>Lorem, psum dolor Lorem ipsum</p>  
+        </div>
+
+        <div class="box2">
+            <div class="circle">
+                <div class="fcrcl" id="b"></div>
+                <div class="back" id="mucd"><span>Ph. No-(011-1234 2345)</span></div>
+            </div>  
+            <h3>MAKE UP</h3>
+            <p>Lorem, psum dolor Lorem ipsum</p>  
+        </div>
+
+        <div class="box3">
+            <div class="circle">
+                <div class="fcrcl" id="c"></div>
+                <div class="back" id="smcs"><span>Ph. No-(011-1234 3456)</span></div>
+            </div>  
+            <h3>SIMPLE MAKE UP</h3>
+            <p>Lorem, psum dolor Lorem ipsum</p>  
+        </div>
+        
+        <div class="box4">
+            <div class="circle">
+                <div class="fcrcl" id="d"></div>
+                <div class="back" id="mndi"><span>Ph. No-(011-1234 4567)</span></div>
+            </div>  
+            <h3>MEHENDI</h3>
+            <p>Lorem, psum dolor Lorem ipsum</p>  
+        </div>
+
+        <div class="box5">
+            <div class="circle">
+                <div class="fcrcl" id="e"></div>
+                <div class="back" id="mmcd"><span>Ph. No-(011-1234 5678)</span></div>
+            </div>  
+            <h3>MODELING MAKE UP</h3>
+            <p>Lorem, psum dolor Lorem ipsum</p>  
+        </div>  
+    </div>    
+</body>
+</html>
